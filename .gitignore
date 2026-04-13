@@ -2,12 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
 # Virtual environments
 .venv/
 venv/
 env/
 ENV/
+env.bak/
+venv.bak/
 
 # Django
 *.log
@@ -15,17 +18,18 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media/
+staticfiles/
 
 # Environment variables
 .env
-.env.*
+.env.local
+.env.*.local
+.env.prod
+.env.dev
 
-# Static and media build outputs
-staticfiles/
-
-# Migrations (optional: keep if you commit migrations)
-# **/migrations/*.py
-# !**/migrations/__init__.py
+# Secrets and credentials
+secrets.json
+.private_key
 
 # Test, coverage, and type-checking
 .pytest_cache/
@@ -48,7 +52,15 @@ pip-wheel-metadata/
 .idea/
 *.swp
 *.swo
+*.sublime-project
+*.sublime-workspace
 
 # OS files
 .DS_Store
 Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Django migrations (uncomment if needed)
+# **/migrations/*.py
+# !**/migrations/__init__.py
